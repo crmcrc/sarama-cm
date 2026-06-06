@@ -714,7 +714,7 @@ function showSection(id){
 
 // ════ GOOGLE IDENTITY ════
 window.onload = function(){
-  if(CLIENT_ID === '452181164966-ltnh542qpneem589fqdpbedrhl4bi9tf.apps.googleusercontent.com'){
+  if(!CLIENT_ID || CLIENT_ID.indexOf('.apps.googleusercontent.com') === -1){
     document.getElementById('login-error').textContent = '⚠️ Pendiente configurar Client ID de Google';
     document.getElementById('login-error').style.display = 'block';
     return;
